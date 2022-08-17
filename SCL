@@ -1,0 +1,66 @@
+# 西门子TIA博途SCL高级课程
+
+### SCL 語言應用
+- 變量引用使用 "", "var1"
+- 賦值 :=  "v1" := "v2" + "v3"
+- shift + " 會調出變量表
+- scl中不能使用絕對地址
+
+IF "START" = 1 THEN
+FOR "R" := 0 TO 19 BY 1 DO
+    "AREA" := SQR("R") * 3.14;
+END_FOR;
+END_IF;
+
+IF "CLEAR" = 1 THEN
+"AREA" := 0;
+END_IF
+
+#### 特點
+- Structured Control Language
+- 基於pascal
+
+#### 語言元素
+- 輸入
+- 輸出
+- 定時器
+- 存儲器
+- 表達式
+- 賦值運算
+- 運算符
+- 程序控制
+
+#### 應用
+- 數據管理
+- 過程優化
+- 配方管理
+- 數學計算/統計任務
+
+#### 編程環境
+
+### 表達式和運算符
+#### algorithm express
+
+### FOR
+"A" := 0;
+FOR "I" := 0 TO 9 BY 1 DO
+  "A" := "A" + 1;
+END_FOR
+
+"A" = 0
+FOR "I" := 0 TO 9 DO // DEFAULT BY 1
+  "A" := "A" + 1;
+END_FOR
+
+"TOTAL" := 0
+FOR "I" := 0 TO 9 DO
+  TOTAL := TOTAL + "DATA".XX["I"]
+END_FOR
+
+IF "A" = 1 AND "B" = 0 THEN
+ "C" = 1;
+ELSIF "A" = 0 THEN
+ "C" = 2;
+ELSE
+ "C" = 3;
+END_IF
